@@ -45,6 +45,8 @@
 import React from "react";
 import AddPost from "./components/AddPost";
 import PostList from "./components/PostList";
+import { useEffect, useState } from "react";
+
 
 async function getData() {
   // Use the correct relative path to your API endpoint
@@ -62,10 +64,10 @@ async function getData() {
 }
 
 const Page = () => {
-  const [posts, setPosts] = React.useState([]);
-  const [error, setError] = React.useState(null);
+  const [posts, setPosts] = useState([]);
+  const [error, setError] = useState(null);
 
-  React.useEffect(() => {
+  useEffect(() => {
     const fetchData = async () => {
       try {
         const data = await getData();
