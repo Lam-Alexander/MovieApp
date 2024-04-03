@@ -1,5 +1,5 @@
-import AddPost from "./components/AddPost";
-import PostList from "./components/PostList";
+import AddPost from "../app/components/AddPost";
+import PostList from "../app/components/PostList";
 
 // async function getData() {
 //   const res = await fetch('/api/posts', {cache: "no-cache"})
