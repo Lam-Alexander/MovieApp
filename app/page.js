@@ -10,7 +10,7 @@ import PostList from "./components/PostList";
 // }
 
 async function getData() {
-  const baseUrl = `.../api/posts`;
+  const baseUrl = `https://movie-64mjxrq8y-lam-alexanders-projects.vercel.app/api/posts`;
   const res = await fetch(baseUrl, {
     method: 'GET',
     headers: {
