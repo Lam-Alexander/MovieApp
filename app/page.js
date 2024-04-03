@@ -1,9 +1,19 @@
 import AddPost from "./components/AddPost";
 import PostList from "./components/PostList";
 
+// async function getData() {
+//   const res = await fetch('/api/posts', {cache: "no-cache"})
+//   if(!res.ok) {
+//     throw new Error("Failed to fetch data")
+//   }
+//   return res.json();
+// }
+
 async function getData() {
-  const res = await fetch('/api/posts', {cache: "no-cache"})
-  if(!res.ok) {
+  // Use the environment variable, or default to localhost for development
+  const baseUrl = process.env.NEXT_PUBLIC_API_BASE_URL || 'http://localhost:3000/';
+  const res = await fetch(`${baseUrl}/api/posts`, {cache: "no-cache"});
+  if (!res.ok) {
     throw new Error("Failed to fetch data")
   }
   return res.json();
