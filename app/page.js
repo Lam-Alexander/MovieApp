@@ -41,7 +41,7 @@
 // }
 
 // export default Page;
-
+'use client'
 import React from "react";
 import AddPost from "./components/AddPost";
 import PostList from "./components/PostList";
