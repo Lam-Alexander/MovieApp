@@ -5,10 +5,11 @@ import { usePathname } from "next/navigation";
 const Header = () => {
     const pathname = usePathname();
     console.log(pathname);
-  const navItems = [
-    { label: "Movie List", href: "/page" },
-    { label: "About", href: "/about" },
-  ];
+    const navItems = [
+      { label: "Movie List", href: "/" },
+      { label: "About", href: "/about" },
+    ];
+    
   return (
     
     <div className="flex justify-center bg-gradient-to-r from-red-500 to-orange-500 py-3">

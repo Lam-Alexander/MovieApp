@@ -5,9 +5,9 @@ const about = () => {
   return (
     <Layout>
       <main className="flex flex-col justify-between p-24 min-h-screen">
-        
+
         <section className="flex-1">
-        
+
           <h1 className="text-xl font-bold text-center">Welcome to MovieHub!</h1>
           <p className="text-center">Hubba bubba baby here we go!</p>
           <p className="text-center">This website was created to manage the database of a movie company.</p>
@@ -17,7 +17,7 @@ const about = () => {
 
         <h1 className='text-xl font-bold text-center'>Meet the team!</h1>
         <section className="grid grid-cols-4 gap-4 mt-4">
-        
+
           <div className="p-5 shadow rounded">
             <h2 className="text-m font-semibold">Sanketh Mekala</h2>
             <p className='text-xs'>Software Developer</p>
