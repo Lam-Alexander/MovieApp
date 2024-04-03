@@ -3,7 +3,7 @@ import PostList from "./components/PostList";
 
 
 async function getData() {
-  const res = await fetch('/api/posts', {cache: "no-cache"})
+  const res = await fetch('https://movie-alfmfn3j9-lam-alexanders-projects.vercel.app/api/posts', {cache: "no-cache"})
   if(!res.ok) {
     throw new Error("Failed to fetch data")
   }
