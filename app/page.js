@@ -1,5 +1,5 @@
-import AddPost from "../app/components/AddPost";
-import PostList from "../app/components/PostList";
+import AddPost from "./components/AddPost";
+import PostList from "./components/PostList";
 
 // async function getData() {
 //   const res = await fetch('/api/posts', {cache: "no-cache"})
@@ -11,11 +11,11 @@ import PostList from "../app/components/PostList";
 
 async function getData() {
   // Use the environment variable, or default to localhost for development
-  const baseUrl = `/api/post`;
-  const res = await fetch(baseUrl, {
+  const baseUrl = `./api/post`;
+  const res = await fetch(url, {
     method: 'GET',
     headers: {
-      'Content-Type': 'application/json'
+      'Content-Type': 'applicaiton/json'
     }
   })
   if (!res.ok) {
