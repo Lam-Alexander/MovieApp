@@ -11,8 +11,8 @@ import PostList from "./components/PostList";
 
 async function getData() {
   // Use the environment variable, or default to localhost for development
-  const baseUrl = process.env.NEXT_PUBLIC_API_BASE_URL || 'https://movie-app-xi-blond.vercel.app/';
-  const res = await fetch(`${baseUrl}/api/posts`, {cache: "no-cache"});
+  const baseUrl = '/api/post';
+  const res = await fetch(`${baseUrl}`, {cache: "no-cache"});
   if (!res.ok) {
     throw new Error("Failed to fetch data")
   }
