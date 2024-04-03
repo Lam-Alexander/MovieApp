@@ -24,7 +24,7 @@ export const PATCH = async (request, {params}) => {
     try {
         const body = await request.json();
         const { id } = params;
-        const { title, description } = body;
+        const { title, listOfActors, releaseYear } = body;
 
         const updatePost = await client.post.update({
             where: {
@@ -32,7 +32,8 @@ export const PATCH = async (request, {params}) => {
             },
             data: {
                 title,
-                description
+                listOfActors,
+                releaseYear
             }
         });
         if(!updatePost){

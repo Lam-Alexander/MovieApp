@@ -50,12 +50,13 @@ const Post = ({ post }) => {
   };
 
   return (
-    <li className="p-3 my-5 bg-slate-300" key={post.id}>
+    <li className="p-3 my-5rounded-xl border-4 m-5" key={post.id}>
       <h1>{post.title}</h1>
-      <p>{post.description}</p>
+      <p>{post.listOfActors}</p>
+      <p>{post.releaseYear}</p>
       <div className="pt-5">
         <button
-          className="text-blue-700 mr-3"
+          className="text-white bg-blue-700 mr-3 px-5 rounded-full"
           onClick={() => {
             setShowModalEdit(true);
             setPostToEdit(post);
@@ -66,30 +67,38 @@ const Post = ({ post }) => {
 
         <Modal showModal={showModalEdit} setShowModal={setShowModalEdit}>
           <form className="w-full px-5 pb-6" onSubmit={handleEditSubmit}>
-            <h1>Add or Update a Post</h1>
+            <h1 className="mb-10 font-bold">Add or Update a Post</h1>
             <input
               type="text"
               placeholder="title"
               name="title"
-              className="w-full p-2 mb-3"
+              className="w-full p-2 mb-3 rounded-2xl"
               value={postToEdit.title}
               onChange={handleChange}
             />
             <input
               type="text"
-              placeholder="description"
-              name="description"
-              className="w-full p-2 mb-3"
-              value={postToEdit.description}
+              placeholder="list of actors"
+              name="listOfActors"
+              className="w-full p-2 mb-3 rounded-2xl"
+              value={postToEdit.listOfActors}
               onChange={handleChange}
             />
-            <button type="submit" className="bg-blue-700 text-white px-5 py-2">
+            <input
+              type="text"
+              placeholder="Release year"
+              name="releaseYear"
+              className="w-full p-2 mb-3 rounded-2xl"
+              value={postToEdit.releaseYear}
+              onChange={handleChange}
+            />
+            <button type="submit" className="bg-blue-700 text-white px-5 py-2 rounded-full">
               submit
             </button>
           </form>
         </Modal>
         <button
-          className="text-red-700 mr-3"
+          className="text-white bg-red-700 mr-3 px-3 rounded-full"
           onClick={() => setShowDeleteModal(true)}
         >
           Delete
@@ -101,14 +110,14 @@ const Post = ({ post }) => {
             </h1>
             <div className="space-x-4">
               <button
-                className="text-blue-700 font-bold"
+                className="text-white bg-blue-700 mr-3 px-5 rounded-full"
                 onClick={() => handleDeletePost(post.id)}
               >
                 {" "}
                 Yes
               </button>
               <button
-                className="text-red-700 font-bold"
+                className="text-white bg-red-700 mr-3 px-5 rounded-full"
                 onClick={() => setShowDeleteModal(false)}
               >
                 {" "}
