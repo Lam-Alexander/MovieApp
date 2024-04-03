@@ -35,7 +35,7 @@ const Page = async () => {
       </main>
     );
   } catch (error) {
-    console.error("Error fetching data:", error);
+    console.error("Error fetching datafuck:", error);
     return <div>Error fetching data</div>;
   }
 }
