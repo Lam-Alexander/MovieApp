@@ -12,7 +12,12 @@ import PostList from "./components/PostList";
 async function getData() {
   // Use the environment variable, or default to localhost for development
   const baseUrl = `/api/post`;
-  const res = await fetch(`${baseUrl}`, {cache: "no-cache"});
+  const res = await fetch(url, {
+    method: 'GET',
+    headers: {
+      'Content-Type': 'applicaiton/json'
+    }
+  })
   if (!res.ok) {
     throw new Error("Failed to fetch data")
   }
