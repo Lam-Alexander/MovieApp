@@ -10,12 +10,11 @@ import PostList from "./components/PostList";
 // }
 
 async function getData() {
-  // Use the environment variable, or default to localhost for development
-  const baseUrl = `../api/posts`;
+  const baseUrl = `.../api/posts`;
   const res = await fetch(baseUrl, {
     method: 'GET',
     headers: {
-      'Content-Type': 'applicaiton/json'
+      'Content-Type': 'application/json'
     }
   })
   if (!res.ok) {
@@ -35,7 +34,7 @@ const Page = async () => {
       </main>
     );
   } catch (error) {
-    console.error("Error fetching datafuck:", error);
+    console.error("Error fetching data:", error);
     return <div>Error fetching data</div>;
   }
 }
