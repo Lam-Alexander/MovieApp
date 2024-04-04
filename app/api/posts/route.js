@@ -43,7 +43,7 @@
 import client from "../../libs/prismadb";
 import { NextResponse } from "next/server";
 
-export const createPost = async (req) => {
+export const POST = async (req) => {
   try {
     const body = await req.json();
     const { title, listOfActors, releaseYear } = body;
@@ -61,7 +61,7 @@ export const createPost = async (req) => {
   }
 };
 
-export const getAllPosts = async () => {
+export const GET = async () => {
   try {
     const posts = await client.post.findMany({
       orderBy: {
