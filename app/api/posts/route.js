@@ -43,12 +43,10 @@
 import client from "../../libs/prismadb";
 import { NextResponse } from "next/server";
 
-// url: http://localhost:3001/api/posts
-
 export const POST = async (req) => {
   try {
     // Set CORS headers for POST request
-    res.setHeader('Access-Control-Allow-Origin', 'https://movie-app-plum-alpha.vercel.app/');
+    res.setHeader('Access-Control-Allow-Origin', 'https://movie-qzjt1ss22-lam-alexanders-projects.vercel.app/');
     res.setHeader('Access-Control-Allow-Methods', 'POST, OPTIONS');
     res.setHeader('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
 
@@ -73,7 +71,7 @@ export const POST = async (req) => {
 export const GET = async () => {
   try {
     // Set CORS headers for GET request
-    res.setHeader('Access-Control-Allow-Origin', 'https://movie-app-plum-alpha.vercel.app/');
+    res.setHeader('Access-Control-Allow-Origin', 'https://movie-qzjt1ss22-lam-alexanders-projects.vercel.app/');
     res.setHeader('Access-Control-Allow-Methods', 'GET, OPTIONS');
     res.setHeader('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
 
