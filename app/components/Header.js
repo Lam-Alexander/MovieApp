@@ -14,8 +14,8 @@ const Header = () => {
     
     <div className="flex justify-center bg-gradient-to-r from-red-500 to-orange-500 py-3">
 
-    <div className="absolute top-0 left-0">
-        <img src="/Movie-Hub.png" alt="Logo" className=" rounded-full h-" />
+    <div className=" flex absolute top-0 left-0 mx-auto">
+        <img src="/Movie-Hub.png" alt="Logo" className=" rounded-full mx-auto" />
     </div>
 
       <ul className="flex gap-5 p-10">

@@ -2,12 +2,23 @@ import AddPost from "./components/AddPost";
 import PostList from "./components/PostList";
 
 
-async function getData() {
-  const res = await fetch('https://movie-alfmfn3j9-lam-alexanders-projects.vercel.app/api/posts')
-  if(!res.ok) {
-    throw new Error("Failed to fetch data")
-  }
-  return res.json();
+// async function getData() {
+//   const res = await fetch('https://movie-alfmfn3j9-lam-alexanders-projects.vercel.app/api/posts')
+//   if(!res.ok) {
+//     throw new Error("Failed to fetch data")
+//   }
+//   return res.json();
+// }
+
+export async function getData() {
+  const res = await fetch('https://movie-alfmfn3j9-lam-alexanders-projects.vercel.app/api/posts', {
+    headers: {
+      'Content-Type': 'application/json',
+    },
+  })
+  const data = await res.json()
+ 
+  return Response.json({ data })
 }
 
 // async function getData() {
