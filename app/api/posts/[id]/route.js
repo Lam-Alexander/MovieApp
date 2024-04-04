@@ -64,7 +64,7 @@
 import client from "@/app/libs/prismadb";
 import { NextResponse } from "next/server";
 
-export const GET = async ({ params }) => {
+export const getPostById = async ({ params }) => {
     try {
         const { id } = params;
         const post = await client.post.findUnique({
@@ -82,7 +82,7 @@ export const GET = async ({ params }) => {
     }
 };
 
-export const PATCH = async (request, { params }) => {
+export const updatePostById = async (request, { params }) => {
     try {
         const body = await request.json();
         const { id } = params;
@@ -108,7 +108,7 @@ export const PATCH = async (request, { params }) => {
     }
 };
 
-export const DELETE = async (request, { params }) => {
+export const deletePostById = async (request, { params }) => {
     try {
         const { id } = params;
         await client.post.delete({
