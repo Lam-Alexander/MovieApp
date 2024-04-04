@@ -5,17 +5,16 @@ import { usePathname } from "next/navigation";
 const Header = () => {
     const pathname = usePathname();
     console.log(pathname);
-    const navItems = [
-      { label: "Movie List", href: "/" },
-      { label: "About", href: "/about" },
-    ];
-    
+  const navItems = [
+    { label: "Movie List", href: "/" },
+    { label: "About", href: "/about" },
+  ];
   return (
     
     <div className="flex justify-center bg-gradient-to-r from-red-500 to-orange-500 py-3">
 
-    <div className=" flex absolute top-0 left-0 mx-auto">
-        <img src="/Movie-Hub.png" alt="Logo" className=" rounded-full mx-auto" />
+    <div className="absolute top-0 left-0">
+        <img src="/Movie-Hub.png" alt="Logo" className=" rounded-full h-" />
     </div>
 
       <ul className="flex gap-5 p-10">
