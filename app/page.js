@@ -1,3 +1,4 @@
+'use client'
 import AddPost from "./components/AddPost";
 import PostList from "./components/PostList";
 
