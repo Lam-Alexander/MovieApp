@@ -2,7 +2,7 @@ import AddPost from "./components/AddPost";
 import PostList from "./components/PostList";
 
 async function getData() {
-  const res = await fetch(`/api/posts`, {cache: "no-cache"})
+  const res = await fetch(`/api/posts/route`, {cache: "no-cache"})
   if(!res.ok) {
     throw new Error("Failed to fetch data")
   }
