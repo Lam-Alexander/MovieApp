@@ -2,13 +2,13 @@
 import AddPost from "./components/AddPost";
 import PostList from "./components/PostList";
 
-// async function getData() {
-//   const res = await fetch('/api/post', {cache: "no-cache"})
-//   if(!res.ok) {
-//     throw new Error("Failed to fetch data")
-//   }
-//   return res.json();
-// }
+async function getData() {
+  const res = await fetch('/api/post', {cache: "no-cache"})
+  if(!res.ok) {
+    throw new Error("Failed to fetch data")
+  }
+  return res.json();
+}
 
 // async function getData() {
 //   const res = await fetch('https://movie-app-plum-alpha.vercel.app/api/posts', {cache: "no-cache"})
@@ -19,13 +19,13 @@ import PostList from "./components/PostList";
 // }
 
 
-async function getData() {
-  const res = await fetch('http://localhost:3000/api/posts', {cache: "no-cache"})
-  if(!res.ok) {
-    throw new Error("Failed to fetch data")
-  }
-  return res.json();
-}
+// async function getData() {
+//   const res = await fetch('http://localhost:3000/api/posts', {cache: "no-cache"})
+//   if(!res.ok) {
+//     throw new Error("Failed to fetch data")
+//   }
+//   return res.json();
+// }
 
 const page = async () => {
   try {
