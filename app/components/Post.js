@@ -50,10 +50,18 @@ const Post = ({ post }) => {
   };
 
   return (
-    <li className="p-3 my-5rounded-xl border-4 m-5" key={post.id}>
-      <h1>{post.title}</h1>
-      <p>{post.listOfActors}</p>
-      <p>{post.releaseYear}</p>
+    <li className="overflow-y-auto p-3 my-5rounded-xl border-2 m-5" key={post.id}>
+      <h1>
+        <strong>Movie:</strong> {post.title}
+      </h1>
+
+      <p>
+        <strong>List of Actors: </strong>{post.listOfActors}
+      </p>
+
+      <p>
+        <strong>Release Year: </strong>{post.releaseYear}
+      </p>
       <div className="pt-5">
         <button
           className="text-white bg-blue-700 mr-3 px-5 rounded-full"
