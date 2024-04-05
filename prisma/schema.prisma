@@ -18,7 +18,7 @@ model Post {
   id String @id @default(auto()) @map("_id") @db.ObjectId
   title String?
   listOfActors String?
-  releaseYear String?
+  releaseYear Int?
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 }
